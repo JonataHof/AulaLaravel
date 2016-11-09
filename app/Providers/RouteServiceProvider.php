@@ -24,7 +24,8 @@ class RouteServiceProvider extends ServiceProvider {
 	{
 		parent::boot($router);
 
-		//
+		$router->model('products','App\\Product');
+		$router->model('categories','App\\Category');
 	}
 
 	/**
