@@ -4,10 +4,10 @@
 
 <div class="page-header">
 	<h1>Criar Produto</h1>
-	<a href="/products" class="btn btn-default">Voltar</a>
+	<a href="/admin/products" class="btn btn-default">Voltar</a>
 </div>
 
-{!! Form::open(['url' => '/products']) !!}
+{!! Form::open(['url' => '/admin/products']) !!}
    @include('products/_formFields')
 {!! Form::close() !!}
 

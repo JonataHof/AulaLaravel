@@ -253,10 +253,12 @@ class ComposerStaticInit4079afad04ae442c418e0ee329695196
     public static $classMap = array (
         'AddCategoryToProductsTable' => __DIR__ . '/../..' . '/database/migrations/2016_11_08_221122_add_category_to_products_table.php',
         'CreateCategoriesTable' => __DIR__ . '/../..' . '/database/migrations/2016_11_08_220745_create_categories_table.php',
+        'CreateCategoryProductTable' => __DIR__ . '/../..' . '/database/migrations/2016_11_10_221529_create_category_product_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateProductsTable' => __DIR__ . '/../..' . '/database/migrations/2016_11_03_211750_create_products_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
+        'DeleteCategoryFromProducts' => __DIR__ . '/../..' . '/database/migrations/2016_11_10_225035_delete_category_from_products.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',

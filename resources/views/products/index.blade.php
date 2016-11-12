@@ -6,7 +6,7 @@
 
 <div class="page-header clearfix">
     <h1>Products</h1>
-    <a href="/products/create" class ="btn btn-primary pull-right">Add</a>
+    <a href="/admin/products/create" class ="btn btn-primary pull-right">Add</a>
     
   
 
@@ -24,12 +24,12 @@
          <tbody>
             <tr>
                 <td>{{$product->name}}</td>
-                <td>{{$product->category->name}}</td>
+                <td>{{implode(', ',$product->categoriesNames())}}</td>
                 <td>
                     <div >
-                        <a href="/products/{{$product->id}}/edit" class="btn btn-default btn-sm">Edit</a>
+                        <a href="/admin/products/{{$product->id}}/edit" class="btn btn-default btn-sm">Edit</a>
 
-                        {!! Form::Open(["url"=>"/products/{$product->id}", "method"=>"DELETE", "class"=>"pull-left"]) !!}
+                        {!! Form::Open(["url"=>"/admin/products/{$product->id}", "method"=>"DELETE", "class"=>"pull-left"]) !!}
                             <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                         {!! Form::Close() !!}
                     </div>

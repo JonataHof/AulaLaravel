@@ -24,6 +24,7 @@ class CreateProductrequest extends Request {
 		return [
 
 			'name' => 'required|min:5'
+			
 			//
 		];
 	}

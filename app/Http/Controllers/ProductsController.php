@@ -13,6 +13,7 @@ class ProductsController extends Controller {
     function index()
     {
         $products = Product::all();
+
         return view('products/index', compact('products'));
     }
 
@@ -23,15 +24,17 @@ class ProductsController extends Controller {
 
     function store(CreateProductrequest $request)
     {
-      Product::create($request->all());
-      return redirect('products');
+      $product = Product::create($request->all());
+      $product->categories()->attach($request->get('category_list'));
+      return redirect('admin/products');
     }
 
     function destroy(Product $product)
     {
       $product->delete();
-      return redirect('products');
+      return redirect('admin/products');
     }
+
     function edit(Product $product)
     {
     	// dd($product);
@@ -39,9 +42,12 @@ class ProductsController extends Controller {
     }
     
     function update(Product $product, CreateProductrequest $request)
-    {
+    {   
+
     	$product->update($request->all());
-    	 return redirect('products');
+        $product->categories()->sync($request->get('category_list'));
+        
+    	 return redirect('admin/products');
     }
 
 }
